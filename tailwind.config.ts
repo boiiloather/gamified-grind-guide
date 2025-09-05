@@ -26,7 +26,9 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					light: 'hsl(var(--primary-light))',
+					dark: 'hsl(var(--primary-dark))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -43,6 +45,14 @@ export default {
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -62,6 +72,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-cosmic': 'var(--gradient-cosmic)',
+				'gradient-reward': 'var(--gradient-reward)',
+				'gradient-success': 'var(--gradient-success)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'reward': 'var(--shadow-reward)',
+				'card': 'var(--shadow-card)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +106,40 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-reward': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '.7'
+					}
+				},
+				'bounce-subtle': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+						'animation-timing-function': 'cubic-bezier(0.8,0,1,1)'
+					},
+					'50%': {
+						transform: 'translateY(-5px)',
+						'animation-timing-function': 'cubic-bezier(0,0,0.2,1)'
+					}
+				},
+				'glow': {
+					'0%': {
+						'box-shadow': '0 0 20px hsl(var(--primary) / 0.3)'
+					},
+					'100%': {
+						'box-shadow': '0 0 30px hsl(var(--primary) / 0.6), 0 0 40px hsl(var(--primary) / 0.3)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-reward': 'pulse-reward 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'bounce-subtle': 'bounce-subtle 0.6s ease-in-out',
+				'glow': 'glow 2s ease-in-out infinite alternate'
 			}
 		}
 	},
